@@ -4,6 +4,7 @@ from queue import Queue
 from threading import Thread, current_thread
 
 # custom module
+import re
 import requests
 
 import crawler
@@ -61,7 +62,8 @@ def fetch_pic():
         link = poke.link
         pic_link = crawler.get_pic_link(link)
         poke.pic_link = pic_link
-        poke.pic_name = '{}_{}.png'.format(poke.id,poke.name_en.lower())
+        fixed_poke_name = re.sub(r'[^\w]','',poke.name_en.lower())
+        poke.pic_name = crawler.remove_white_space('p_{}_{}.png'.format(poke.id, fixed_poke_name))
 
         download_img(poke)
         Q.task_done()
