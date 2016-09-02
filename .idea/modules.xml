@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/pokemon-crawler.iml" filepath="$PROJECT_DIR$/.idea/pokemon-crawler.iml" />
+      <module fileurl="file://E:/Dev/Python/pokemon_crawler/.idea/pokemon_crawler.iml" filepath="E:/Dev/Python/pokemon_crawler/.idea/pokemon_crawler.iml" />
     </modules>
   </component>
 </project>
